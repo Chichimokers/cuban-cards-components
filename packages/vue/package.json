@@ -43,7 +43,7 @@
     "**/*.css"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "node init && vite build"
   },
   "peerDependencies": {
     "vue": ">=3.3"
