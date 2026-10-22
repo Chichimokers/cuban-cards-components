@@ -1,0 +1,29 @@
+{
+  "name": "cuban-cards-components",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Componentes React y Vue para identificar tarjetas cubanas con el catálogo abierto cuban_cards_prefixes.",
+  "license": "GPL-3.0-or-later",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "dev:react": "npm run dev --workspace @cuban-cards/example-react",
+    "dev:vue": "npm run dev --workspace @cuban-cards/example-vue",
+    "build": "npm run build --workspace @cuban-cards/react && npm run build --workspace @cuban-cards/vue",
+    "build:examples": "npm run build --workspace @cuban-cards/example-react && npm run build --workspace @cuban-cards/example-vue",
+    "check": "npm run build && npm run build:examples",
+    "preview:react": "npm run preview --workspace @cuban-cards/example-react",
+    "preview:vue": "npm run preview --workspace @cuban-cards/example-vue"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "vite": "^8.3.5",
+    "vue": "^3.5.44"
+  }
+}

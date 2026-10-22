@@ -1,0 +1,15 @@
+{
+  "name": "@cuban-cards/core",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Lógica compartida para cargar el catálogo cuban_cards_prefixes desde el CDN y analizar tarjetas cubanas.",
+  "license": "GPL-3.0-or-later",
+  "exports": {
+    ".": "./src/index.js",
+    "./styles.css": "./src/styles.css"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ]
+}

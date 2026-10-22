@@ -1,0 +1,35 @@
+{
+  "name": "@cuban-cards/react",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Componente React para identificar tarjetas cubanas y dibujarlas con el estilo del Explorador de tarjetas cubanas.",
+  "license": "GPL-3.0-or-later",
+  "main": "./dist/cuban-cards-react.umd.cjs",
+  "module": "./dist/cuban-cards-react.js",
+  "exports": {
+    ".": {
+      "import": "./dist/cuban-cards-react.js",
+      "require": "./dist/cuban-cards-react.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@cuban-cards/core": "0.1.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.5"
+  }
+}
