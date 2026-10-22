@@ -3,8 +3,6 @@ dist/
 .vite/
 coverage/
 *.log
-.env
-.env.*
 !.env.example
 .npmrc
 .npmrc.*
@@ -12,3 +10,4 @@ coverage/
 *.tgz
 .DS_Store
 Thumbs.db
+config.bat

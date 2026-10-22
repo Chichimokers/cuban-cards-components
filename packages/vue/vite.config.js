@@ -2,6 +2,9 @@ import { fileURLToPath } from 'node:url'
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const root = fileURLToPath(new URL('.', import.meta.url))
 
@@ -23,4 +26,4 @@ export default defineConfig({
     },
     sourcemap: true,
   },
-})
+});
