@@ -1,6 +1,6 @@
 # @cuban-cards/core
 
-Lógica compartida por `@cuban-cards/react` y `@cuban-cards/vue`:
+Lógica compartida por `cuban-cards-react` y `cuban-cards-vue`:
 
 - carga del catálogo desde el CDN de `qvapay/cuban_cards_prefixes`,
 - normalización y validación de números,

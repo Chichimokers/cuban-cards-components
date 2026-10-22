@@ -1,10 +1,12 @@
 # Cuban Cards Components
 
 [![CI](https://github.com/Chichimokers/cuban-cards-components/actions/workflows/ci.yml/badge.svg)](https://github.com/Chichimokers/cuban-cards-components/actions/workflows/ci.yml)
+[![npm react](https://img.shields.io/npm/v/cuban-cards-react.svg?label=cuban-cards-react)](https://www.npmjs.com/package/cuban-cards-react)
+[![npm vue](https://img.shields.io/npm/v/cuban-cards-vue.svg?label=cuban-cards-vue)](https://www.npmjs.com/package/cuban-cards-vue)
 
 Componentes **React** y **Vue 3** para identificar tarjetas cubanas y dibujarlas con el estilo del [Explorador de tarjetas cubanas](https://github.com/rblez/explorador-tarjetas-cubanas). El catálogo se consume siempre desde el CDN de [`qvapay/cuban_cards_prefixes`](https://github.com/qvapay/cuban_cards_prefixes), nunca desde una copia local.
 
-El paquete incluye tres niveles de integración:
+Los paquetes incluyen tres niveles de integración:
 
 | Componente | Uso |
 | --- | --- |
@@ -60,28 +62,29 @@ Estructura:
 ```text
 packages/
   core/             lógica, catálogo, análisis, estilos compartidos y assets
-  react/            @cuban-cards/react
-  vue/              @cuban-cards/vue
+  react/            cuban-cards-react
+  vue/              cuban-cards-vue
 examples/
   react/            demo Vite
   vue/              demo Vite
 ```
 
-Los paquetes están preparados para publicarse en npm. Mientras tanto, dentro de este repositorio se consumen mediante los workspaces y los ejemplos los resuelven con alias de Vite.
+Ambos paquetes están publicados en npm y se pueden instalar por separado:
 
-> Los paquetes aún no están publicados en npm. Para usar los componentes hoy en un sitio externo, clona el repositorio, ejecuta `npm install && npm run build` y consume `packages/react/dist` o `packages/vue/dist`; también puedes publicar los workspaces en tu registro. Los imports de las secciones siguientes muestran la API final.
+- [`cuban-cards-react`](https://www.npmjs.com/package/cuban-cards-react)
+- [`cuban-cards-vue`](https://www.npmjs.com/package/cuban-cards-vue)
+
+Dentro del monorepo se consumen mediante los workspaces y los ejemplos los resuelven con alias de Vite.
 
 ## React
 
-Cuando el paquete esté publicado en npm:
-
 ```bash
-npm install @cuban-cards/react
+npm install cuban-cards-react
 ```
 
 ```jsx
-import { CubanCard } from '@cuban-cards/react'
-import '@cuban-cards/react/style.css'
+import { CubanCard } from 'cuban-cards-react'
+import 'cuban-cards-react/style.css'
 
 export default function App() {
   return (
@@ -132,16 +135,14 @@ Acepta las mismas props que `CubanCard`, con `showExamples` y `showBranding` act
 
 ## Vue 3
 
-Cuando el paquete esté publicado en npm:
-
 ```bash
-npm install @cuban-cards/vue
+npm install cuban-cards-vue
 ```
 
 ```vue
 <script setup>
-import { CubanCard } from '@cuban-cards/vue'
-import '@cuban-cards/vue/style.css'
+import { CubanCard } from 'cuban-cards-vue'
+import 'cuban-cards-vue/style.css'
 </script>
 
 <template>
@@ -211,9 +212,9 @@ El servidor debe responder `prefixes.json` y `validators.json` con CORS habilita
 El CSS de la librería se importa explícitamente:
 
 ```js
-import '@cuban-cards/react/style.css'
+import 'cuban-cards-react/style.css'
 // o
-import '@cuban-cards/vue/style.css'
+import 'cuban-cards-vue/style.css'
 ```
 
 Variables principales disponibles en el contenedor `.ccc-root`:

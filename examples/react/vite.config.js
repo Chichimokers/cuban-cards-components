@@ -9,11 +9,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@cuban-cards/react/style.css': resolve(
+      'cuban-cards-react/style.css': resolve(
         root,
         '../../packages/core/src/styles.css',
       ),
-      '@cuban-cards/react': resolve(
+      'cuban-cards-react': resolve(
         root,
         '../../packages/react/src/index.js',
       ),

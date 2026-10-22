@@ -6,25 +6,20 @@ import react from '@vitejs/plugin-react'
 const root = fileURLToPath(new URL('.', import.meta.url))
 
 export default defineConfig({
+  base: './',
   plugins: [react()],
   build: {
+    assetsDir: '',
     assetsInlineLimit: 0,
     lib: {
       entry: resolve(root, 'src/index.js'),
-      name: 'CubanCardsReact',
-      formats: ['es', 'umd'],
+      formats: ['es', 'cjs'],
       fileName: (format) =>
-        format === 'es' ? 'cuban-cards-react.js' : 'cuban-cards-react.umd.cjs',
+        format === 'es' ? 'cuban-cards-react.js' : 'cuban-cards-react.cjs',
       cssFileName: 'style',
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
+      external: ['react', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
     },
     sourcemap: true,
   },

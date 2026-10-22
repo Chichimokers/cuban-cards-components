@@ -1,0 +1,41 @@
+name: Publish packages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Publish cuban-cards-react
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if npm view cuban-cards-react@0.1.0 version >/dev/null 2>&1; then
+            echo "cuban-cards-react@0.1.0 already published"
+          else
+            npm publish --workspace cuban-cards-react --access public
+          fi
+
+      - name: Publish cuban-cards-vue
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if npm view cuban-cards-vue@0.1.0 version >/dev/null 2>&1; then
+            echo "cuban-cards-vue@0.1.0 already published"
+          else
+            npm publish --workspace cuban-cards-vue --access public
+          fi

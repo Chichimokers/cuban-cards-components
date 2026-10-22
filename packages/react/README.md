@@ -1,24 +1,26 @@
-# @cuban-cards/react
+# cuban-cards-react
+
+[![npm](https://img.shields.io/npm/v/cuban-cards-react.svg)](https://www.npmjs.com/package/cuban-cards-react)
 
 Componentes React para identificar tarjetas cubanas con el catálogo abierto [`qvapay/cuban_cards_prefixes`](https://github.com/qvapay/cuban_cards_prefixes), cargado desde su CDN.
 
 ## Instalación
 
 ```bash
-npm install @cuban-cards/react
+npm install cuban-cards-react
 ```
 
 Importa el CSS una vez:
 
 ```js
-import '@cuban-cards/react/style.css'
+import 'cuban-cards-react/style.css'
 ```
 
 ## Uso
 
 ```jsx
-import { CubanCard } from '@cuban-cards/react'
-import '@cuban-cards/react/style.css'
+import { CubanCard } from 'cuban-cards-react'
+import 'cuban-cards-react/style.css'
 
 export default function App() {
   return (
@@ -36,7 +38,7 @@ export default function App() {
 ### Solo la tarjeta
 
 ```jsx
-import { CubanCardView } from '@cuban-cards/react'
+import { CubanCardView } from 'cuban-cards-react'
 
 <CubanCardView number="9204 1299 0000 0003" size="compact" showDetails />
 ```
@@ -50,7 +52,7 @@ También puedes pasar un `analysis` ya calculado para evitar cargar el catálogo
 ### Explorador completo
 
 ```jsx
-import { CubanCardExplorer } from '@cuban-cards/react'
+import { CubanCardExplorer } from 'cuban-cards-react'
 
 <CubanCardExplorer onResult={setAnalysis} />
 ```

@@ -1,24 +1,46 @@
 {
-  "name": "@cuban-cards/vue",
+  "name": "cuban-cards-vue",
   "version": "0.1.0",
   "type": "module",
   "description": "Componente Vue 3 para identificar tarjetas cubanas y dibujarlas con el estilo del Explorador de tarjetas cubanas.",
   "license": "GPL-3.0-or-later",
-  "main": "./dist/cuban-cards-vue.umd.cjs",
+  "homepage": "https://github.com/Chichimokers/cuban-cards-components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chichimokers/cuban-cards-components.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/Chichimokers/cuban-cards-components/issues"
+  },
+  "keywords": [
+    "cuban-cards",
+    "cuba",
+    "tarjetas",
+    "vue",
+    "qvapay",
+    "card-prefix"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/cuban-cards-vue.cjs",
   "module": "./dist/cuban-cards-vue.js",
   "exports": {
     ".": {
       "import": "./dist/cuban-cards-vue.js",
-      "require": "./dist/cuban-cards-vue.umd.cjs"
+      "require": "./dist/cuban-cards-vue.cjs"
     },
     "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
   ],
   "sideEffects": [
-    "*.css"
+    "**/*.css"
   ],
   "scripts": {
     "build": "vite build"

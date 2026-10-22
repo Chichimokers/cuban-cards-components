@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { CubanCard, CubanCardExplorer } from '@cuban-cards/react'
+import { CubanCard, CubanCardExplorer } from 'cuban-cards-react'
 
 const cdnBase = import.meta.env.VITE_CUBAN_CARDS_CDN || undefined
 

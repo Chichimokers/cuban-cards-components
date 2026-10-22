@@ -1,17 +1,19 @@
-# @cuban-cards/vue
+# cuban-cards-vue
+
+[![npm](https://img.shields.io/npm/v/cuban-cards-vue.svg)](https://www.npmjs.com/package/cuban-cards-vue)
 
 Componentes Vue 3 para identificar tarjetas cubanas con el catálogo abierto [`qvapay/cuban_cards_prefixes`](https://github.com/qvapay/cuban_cards_prefixes), cargado desde su CDN.
 
 ## Instalación
 
 ```bash
-npm install @cuban-cards/vue
+npm install cuban-cards-vue
 ```
 
 Importa el CSS una vez:
 
 ```js
-import '@cuban-cards/vue/style.css'
+import 'cuban-cards-vue/style.css'
 ```
 
 ## Uso
@@ -19,8 +21,8 @@ import '@cuban-cards/vue/style.css'
 ```vue
 <script setup>
 import { ref } from 'vue'
-import { CubanCard } from '@cuban-cards/vue'
-import '@cuban-cards/vue/style.css'
+import { CubanCard } from 'cuban-cards-vue'
+import 'cuban-cards-vue/style.css'
 
 const number = ref('')
 const analysis = ref(null)
@@ -37,7 +39,7 @@ const analysis = ref(null)
 
 ```vue
 <script setup>
-import { CubanCardView } from '@cuban-cards/vue'
+import { CubanCardView } from 'cuban-cards-vue'
 </script>
 
 <template>
@@ -55,7 +57,7 @@ También puedes pasar un `analysis` ya calculado:
 
 ```vue
 <script setup>
-import { CubanCardExplorer } from '@cuban-cards/vue'
+import { CubanCardExplorer } from 'cuban-cards-vue'
 </script>
 
 <template>

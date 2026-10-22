@@ -12,7 +12,7 @@
   "scripts": {
     "dev:react": "npm run dev --workspace @cuban-cards/example-react",
     "dev:vue": "npm run dev --workspace @cuban-cards/example-vue",
-    "build": "npm run build --workspace @cuban-cards/react && npm run build --workspace @cuban-cards/vue",
+    "build": "npm run build --workspace cuban-cards-react && npm run build --workspace cuban-cards-vue",
     "build:examples": "npm run build --workspace @cuban-cards/example-react && npm run build --workspace @cuban-cards/example-vue",
     "check": "npm run build && npm run build:examples",
     "preview:react": "npm run preview --workspace @cuban-cards/example-react",

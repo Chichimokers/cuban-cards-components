@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { CubanCard, CubanCardExplorer } from '@cuban-cards/vue'
+import { CubanCard, CubanCardExplorer } from 'cuban-cards-vue'
 
 const mode = ref('compact')
 const result = ref(null)

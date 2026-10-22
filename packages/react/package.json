@@ -1,31 +1,52 @@
 {
-  "name": "@cuban-cards/react",
+  "name": "cuban-cards-react",
   "version": "0.1.0",
   "type": "module",
   "description": "Componente React para identificar tarjetas cubanas y dibujarlas con el estilo del Explorador de tarjetas cubanas.",
   "license": "GPL-3.0-or-later",
-  "main": "./dist/cuban-cards-react.umd.cjs",
+  "homepage": "https://github.com/Chichimokers/cuban-cards-components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chichimokers/cuban-cards-components.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/Chichimokers/cuban-cards-components/issues"
+  },
+  "keywords": [
+    "cuban-cards",
+    "cuba",
+    "tarjetas",
+    "react",
+    "qvapay",
+    "card-prefix"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/cuban-cards-react.cjs",
   "module": "./dist/cuban-cards-react.js",
   "exports": {
     ".": {
       "import": "./dist/cuban-cards-react.js",
-      "require": "./dist/cuban-cards-react.umd.cjs"
+      "require": "./dist/cuban-cards-react.cjs"
     },
     "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
   ],
   "sideEffects": [
-    "*.css"
+    "**/*.css"
   ],
   "scripts": {
     "build": "vite build"
   },
   "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18"
+    "react": ">=18"
   },
   "devDependencies": {
     "@cuban-cards/core": "0.1.0",
