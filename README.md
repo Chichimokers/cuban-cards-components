@@ -69,7 +69,11 @@ examples/
 
 Los paquetes están preparados para publicarse en npm. Mientras tanto, dentro de este repositorio se consumen mediante los workspaces y los ejemplos los resuelven con alias de Vite.
 
+> Los paquetes aún no están publicados en npm. Para usar los componentes hoy en un sitio externo, clona el repositorio, ejecuta `npm install && npm run build` y consume `packages/react/dist` o `packages/vue/dist`; también puedes publicar los workspaces en tu registro. Los imports de las secciones siguientes muestran la API final.
+
 ## React
+
+Cuando el paquete esté publicado en npm:
 
 ```bash
 npm install @cuban-cards/react
@@ -127,6 +131,8 @@ Para Next.js, el componente usa hooks de cliente: colócalo en un archivo con `'
 Acepta las mismas props que `CubanCard`, con `showExamples` y `showBranding` activados por defecto. Está pensado para una página completa, no para un widget embebido.
 
 ## Vue 3
+
+Cuando el paquete esté publicado en npm:
 
 ```bash
 npm install @cuban-cards/vue
