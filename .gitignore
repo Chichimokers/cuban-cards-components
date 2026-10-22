@@ -6,5 +6,9 @@ coverage/
 .env
 .env.*
 !.env.example
+.npmrc
+.npmrc.*
+!.npmrc.example
+*.tgz
 .DS_Store
 Thumbs.db
