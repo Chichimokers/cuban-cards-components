@@ -1,6 +1,8 @@
 # Cuban Cards Components
 
 [![CI](https://github.com/Chichimokers/cuban-cards-components/actions/workflows/ci.yml/badge.svg)](https://github.com/Chichimokers/cuban-cards-components/actions/workflows/ci.yml)
+[![cuban-cards-react](https://img.shields.io/npm/v/cuban-cards-react.svg)](https://www.npmjs.com/package/cuban-cards-react)
+[![cuban-cards-vue](https://img.shields.io/npm/v/cuban-cards-vue.svg)](https://www.npmjs.com/package/cuban-cards-vue)
 
 Componentes **React** y **Vue 3** para identificar tarjetas cubanas y dibujarlas con el estilo del [Explorador de tarjetas cubanas](https://github.com/rblez/explorador-tarjetas-cubanas). El catálogo se consume siempre desde el CDN de [`qvapay/cuban_cards_prefixes`](https://github.com/qvapay/cuban_cards_prefixes), nunca desde una copia local.
 
@@ -67,12 +69,12 @@ examples/
   vue/              demo Vite
 ```
 
-Los paquetes se publican por separado en npm:
+Los paquetes están publicados por separado en npm:
 
-- `cuban-cards-react`
-- `cuban-cards-vue`
+- [`cuban-cards-react`](https://www.npmjs.com/package/cuban-cards-react)
+- [`cuban-cards-vue`](https://www.npmjs.com/package/cuban-cards-vue)
 
-> La publicación está pendiente por una interrupción parcial del registro de npm. Los paquetes ya están compilados y el workflow `Publish packages` los publicará en cuanto el servicio se restablezca. Mientras tanto, dentro del monorepo se consumen mediante los workspaces y los ejemplos los resuelven con alias de Vite.
+Ambos están disponibles en la versión `0.1.0`. Dentro del monorepo se consumen mediante los workspaces y los ejemplos los resuelven con alias de Vite.
 
 ## React
 
